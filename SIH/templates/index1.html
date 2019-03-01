@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Zingo</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+      <link rel='stylesheet' href='https://s.cdpn.io/3/bootstrap.min.css'>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+
+  
+</head>
+
+<body>
+
+  <section class="container">
+  <!--for demo wrap-->
+  <h1>Monitor return status</h1>
+  <input type="search" class="light-table-filter" data-table="order-table" placeholder="Filter">
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Return ID</th>
+          <th>Date of Return</th>
+          <th>Wholesaler</th>
+          <th>Region</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0" class="order-table table">
+      <tbody>
+       {% for x in range(leng) %}
+                
+                  <tr>
+                  <td class="column1">
+                  {{ ID[x] }}
+                  </td>
+                  <td class="column2">
+                  {{ DOR[x] }}
+                  </td>
+                 
+                  <td class="column3">
+                  {{ WHOLE[x] }}
+                  </td>
+                  <td class="column4">
+                  {{ REG[x] }}
+                  </td>
+                  <td class="column5">
+                  {{ PRICE[x] }}
+                  </td>
+                    </tr>
+              
+                
+                  {% endfor %}
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+
+ <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+   
+<!-- follow me template -->
+<div class="made-with-love">
+  Made with
+  <i>♥</i> by
+  <a target="_blank" href="https://codepen.io/nikhil8krishnan">Bits N'' Bytes</a>
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  
+
+   <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+   <script src="{{ url_for('static', filename='js/index1.js') }}"></script>
+   
+
+
+
+</body>
+
+</html>
